@@ -1,0 +1,6 @@
+filename = "Basic_emotions.csv";
+data = readtable(filename);
+textData = data.Word;
+cleanedDocuments = tokenizedDocument(textData);
+cleanedDocuments = preprocess(cleanedDocuments,'Style','lemma');
+cleanedDocuments(1:10)
