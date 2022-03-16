@@ -1,6 +1,6 @@
 filename = "Basic_emotions.csv";
 data = readtable(filename);
-textData = data.Word;
-cleanedDocuments = tokenizedDocument(textData);
+emotionsData = data.Word;
+cleanedDocuments = tokenizedDocument(emotionsData);
 cleanedDocuments = removeLongWords(cleanedDocuments,6);
 cleanedDocuments(1:10)

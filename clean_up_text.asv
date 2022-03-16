@@ -1,6 +1,6 @@
 function cleaned_text = clean_up_text(text_data)
 
-% need to first read the raw text file into array format, like below
+% need to read the CSV file first into textData's format below
 %   data = readtable(text_filepath);
 %   textData = data.Word;
 
