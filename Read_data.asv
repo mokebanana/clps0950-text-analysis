@@ -17,4 +17,9 @@ new_file_name = "cleaned_text.txt";
 writeTextDocument(cleaned_text,new_file_name);
 data2 = readtable(new_file_name);
 cleanData = table2array(data2);
-M = tfidf(bagOfWords)
+line = 1
+last = length(cleanedDocuments)
+while i = 1:length(cleanData)
+Word_counter = count(cleanData, );
+Sum_wc = sum(Word_counter);
+end
