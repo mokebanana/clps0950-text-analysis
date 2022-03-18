@@ -1,4 +1,4 @@
-function [countEmotion] = sumEmotion(bagTbl,)
+function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
     countEmotion = zeros(1,10);
     table_size = bagTbl.size();
     rows = table_size(1);

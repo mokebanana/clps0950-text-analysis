@@ -15,4 +15,8 @@ cleaned_text = removeWords(cleaned_text, 'reviewtext');
 bag = bagOfWords(cleaned_text);
 bagTbl = topkwords(bag,bag.NumWords); % table of all words + counts
 % Filter for: words that are in emotionsList
-eTbl = bagTbl(isEmotion(bagTbl{:,"Word"},emotionsList),:)
+% eTbl = bagTbl(isEmotion(bagTbl{:,"Word"},emotionsList),:)
+
+for i = bagTbl
+    disp(i)
+end
