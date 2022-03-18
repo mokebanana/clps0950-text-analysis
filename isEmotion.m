@@ -1,4 +1,4 @@
-function found = isEmotion(word, emotionsList)
+function [found,index] = isEmotion(word, emotionsList)
 % isEmotion: last updated Angela Li 03.17.22
 %       takes in a word and emotionsList and returns whether the word is
 %       an emotional-valence word (present in emotionsList) or not
@@ -7,10 +7,11 @@ function found = isEmotion(word, emotionsList)
 %       emotionsList: (cell array)
 % returns
 %       found: (boolean)
-
+index = 0;
 for e = emotionsList
+    index = index + 1;
     if isequal(char(e),word)
-        found = true;
+        found = true;    
         return
     end
 end

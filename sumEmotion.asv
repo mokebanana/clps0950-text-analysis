@@ -7,13 +7,11 @@ function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
     for i = 1:rows
         count = bagTbl(i,2);
         word = bagTbl(i,1);
-        wordCell = table2array(word);
-        countCell = table2array(count);
-        [found,ind] = isEmotion(wordCell, emotionsList);
-        if found == 1
+        [found,ind] = isEmotion(word, emotionsList);
+        if found
            emotionRow = emotionsTbl(ind,:);
            vec = table2array(emotionRow(:,2:11));
-           vecMultiplied = vec*countCell;
+           vecMultiplied = vec*count
            countEmotion = countEmotion + vecMultiplied;
         end
     end
