@@ -7,6 +7,7 @@ function [found,index] = isEmotion(word, emotionsList)
 %       emotionsList: (cell array)
 % returns
 %       found: (boolean)
+%       index: (integer)
 index = 0;
 for e = emotionsList
     index = index + 1;

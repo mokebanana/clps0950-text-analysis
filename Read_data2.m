@@ -17,3 +17,4 @@ bagTbl = topkwords(bag,bag.NumWords); % table of all words + counts
 % Filter for: words that are in emotionsList
 % eTbl = bagTbl(isEmotion(bagTbl{:,"Word"},emotionsList),:)
 
+emotionsVec = sumEmotion(bagTbl,emotionsTbl);
