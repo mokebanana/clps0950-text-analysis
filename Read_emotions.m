@@ -1,8 +1,11 @@
-filename = "Basic_emotions.csv";
-data = readtable(filename);
-emotionsData = data.Word;
-cleanedDocuments = tokenizedDocument(emotionsData);
-cleanedDocuments = removeLongWords(cleanedDocuments,6);
-cleanedDocuments(1:10)
-newDocuments = removeEmptyDocuments(cleanedDocuments); %gets rid of empty lines
+filename = "NRC.csv"; % emotion trigger words doc
+data = readtable(filename); % reads in the entire table
 
+% Filter for: emotions that are either pos or neg
+mustBePos = data{:, "Positive"} == 1;
+mustBeNeg = data{:, "Negative"} == 1;
+tbl = data( mustBePos | mustBeNeg , :); % tbl size: 5555 x 11
+
+% emotionsList
+emotionsList = tbl.Word;
+emotionsList = emotionsList';

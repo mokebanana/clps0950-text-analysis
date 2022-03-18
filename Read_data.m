@@ -17,11 +17,11 @@ new_file_name = "cleaned_text.txt";
 writeTextDocument(cleaned_text,new_file_name);
 data2 = readtable(new_file_name);
 cleanData = table2array(data2);
-line = 1
-last = length(cleanedDocuments)
+line = 1;
+last = length(cleanedDocuments);
 while line < last 
-    word = newDocuments(1,line)
+    word = newDocuments(1,line);
     Word_counter = count(cleanData, word);
     Sum_wc = sum(Word_counter);
-    line = line + 1
+    line = line + 1;
 end

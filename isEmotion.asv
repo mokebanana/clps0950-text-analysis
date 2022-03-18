@@ -1,0 +1,12 @@
+function found = isEmotion(word, emotionsList)
+% isEmotion: last updated Angela Li 03.17.22
+%   takes in a word and emotionsList and returns whether the word is inside
+%   of
+for e = emotionsList
+    if isequal(char(e),word)
+        found = true;
+        return
+    end
+end
+found = false;
+end
