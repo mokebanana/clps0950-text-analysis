@@ -1,4 +1,13 @@
 function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
+% sumEmotion: last updated Tani and Angela 03.21.22
+%       
+% accepts
+%       word: (char)
+%       emotionsList: (cell array)
+% returns
+%       found: (boolean)
+%       index: (integer)
+
     countEmotion = zeros(1,10);
     table_size = size(bagTbl);
     rows = table_size(1);
@@ -7,11 +16,13 @@ function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
     for i = 1:rows
         count = bagTbl(i,2);
         word = bagTbl(i,1);
-        [found,ind] = isEmotion(word, emotionsList);
-        if found
+        wordCell = table2array(word);
+        countCell = table2array(count);
+        [found,ind] = isEmotion(wordCell, emotionsList);
+        if found == 1
            emotionRow = emotionsTbl(ind,:);
            vec = table2array(emotionRow(:,2:11));
-           vecMultiplied = vec*count
+           vecMultiplied = vec*countCell;
            countEmotion = countEmotion + vecMultiplied;
         end
     end

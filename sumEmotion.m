@@ -1,4 +1,14 @@
 function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
+% sumEmotion: last updated Tani and Angela 03.21.22
+%       takes in bagTbl (table with text's unique words and their counts)
+%       and emotionsTbl (table with emotional words and their sentiments)
+% accepts
+%       bagTbl: (tbl)
+%       emotionsTbl: (tbl)
+% returns
+%       found: (boolean)
+%       index: (integer)
+
     countEmotion = zeros(1,10);
     table_size = size(bagTbl);
     rows = table_size(1);
