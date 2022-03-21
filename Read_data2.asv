@@ -15,9 +15,7 @@ cleaned_text = removeWords(cleaned_text, 'reviewtext');
 bag = bagOfWords(cleaned_text);
 bagTbl = topkwords(bag,bag.NumWords); % table of all words + counts
 % Filter for: words that are in emotionsList
-
-secondColumn = table2array(bagTbl(:,2));
-totalCount = sum(secondColumn);
-%sums all the words in text
+% eTbl = bagTbl(isEmotion(bagTbl{:,"Word"},emotionsList),:)
+totalCount = sum((bagTbl(:2));
 
 emotionsVec = sumEmotion(bagTbl,emotionsTbl);

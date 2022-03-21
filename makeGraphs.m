@@ -1,5 +1,7 @@
 PosNeg = emotionsVec(1:2);
 sentiments = emotionsVec(3:10);
+PosScore = emotionsVec(1)/totalCount;
+NegScore = emotionsVec(2)/totalCount;
 
 figure(1)
 subplot(1,2,1)
