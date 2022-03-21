@@ -1,13 +1,15 @@
-posNeg = emotionsVec(1:2);
+PosNeg = emotionsVec(1:2);
 sentiments = emotionsVec(3:10);
 
 figure(1)
 subplot(1,2,1)
-barPosNeg = bar(posNeg);
+barPosNeg = bar(PosNeg);
+set(gca,'xticklabel',{'Positive', 'Negative'});
 title('Total Pos. and Neg. Valency of Words');
 ylabel('# of Words')
 subplot(1,2,2)
 barSentiments = bar(sentiments);
+set(gca,'xticklabel',{'Anger', 'Anticipation', 'Digust', 'Fear', 'Joy', 'Sadness', 'Surprise', 'Trust'});
 title('Total Valency of Dif. Emotions');
 ylabel('# of Words');
 
