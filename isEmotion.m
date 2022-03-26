@@ -1,6 +1,6 @@
 function [found,index] = isEmotion(word, emotionsList)
 % isEmotion: last updated Angela Li 03.17.22
-%       takes in a word and emotionsList and returns whether the word is
+%       takes in: a word and emotionsList and returns: whether the word is
 %       an emotional-valence word (present in emotionsList) or not
 % accepts
 %       word: (char)

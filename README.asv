@@ -7,7 +7,7 @@ gif:
 ![](https://i.imgur.com/6HNTZBK.gif)
 
 video demo link:
-https://youtu.be/guxJ0-phL7s
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -19,9 +19,9 @@ https://youtu.be/guxJ0-phL7s
 
 * our main documents *
 
-NRC.csv: all emotional words and corresponding sentiments
+- NRC.csv: all emotional words and corresponding sentiments
 
-Text_data: Amazon review data for car tool (5 stars, highly positive)
+- Text_data: Amazon review data for car tool (5 stars, highly positive)
 
                          - - - - - - - - -
 
@@ -48,8 +48,6 @@ Read_data2:
 - writes cleaned text to cleaned_text
 - produces a table with all the unique words in the text and their
   individual occurances within the text
-- most importantly, it generates the vector of the total # of sentiments
-  within the text
 
 makeGraphs: graphs bar charts and wordCloud
 

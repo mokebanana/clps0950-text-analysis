@@ -6,8 +6,7 @@ function [countEmotion] = sumEmotion(bagTbl, emotionsTbl)
 %       bagTbl: (tbl)
 %       emotionsTbl: (tbl)
 % returns
-%       found: (boolean)
-%       index: (integer)
+%       countEmotion: (array of numbers)
 
     countEmotion = zeros(1,10);
     table_size = size(bagTbl);
